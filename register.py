@@ -30,3 +30,9 @@ class Register:
         time.sleep(1)
         print()
         print("Account has been created")
+
+    def encrypt(self, password):
+        pass
+
+    def send(self, username, password, role):
+        pass

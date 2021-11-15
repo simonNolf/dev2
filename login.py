@@ -1,18 +1,17 @@
 import time
-
 import user
+
 
 class Login:
     def __init__(self):
         pass
 
-    def loginauth(self,username, password):
+    def loginauth(self, username, password):
         if user.User().username() == username:
             if password == user.User().password():
                 print("Login successful")
                 return True
         return False
-
 
     # Login
     def login(self):
@@ -29,16 +28,14 @@ class Login:
             else:
                 break
 
-        if self.loginauth(self, username, password):
+        if self.loginauth(username, password):
             return self.session(username)
         else:
             print("Invalid username or password")
 
-
-    def session(self,username):
+    def session(self, username):
         print("Welcome to your account " + username)
-        if user.User().role() == "admin":
-            print("vous avez le role " + user.User().role())
+        print("vous avez le role " + user.User().role())
         while True:
             option = input(username + " > ")
             if option == "logout":
@@ -69,3 +66,10 @@ class Login:
                     print("There is no account with that username")
             else:
                 print(option + " is not an option")
+
+    def get_users(self):
+        #from DB
+        pass
+
+    def encrypt(self, password):
+        pass

@@ -1,4 +1,3 @@
-import user as User
 import login as login
 import register as register
 import time

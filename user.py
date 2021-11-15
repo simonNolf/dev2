@@ -12,7 +12,7 @@ class User:
     :type role : string
     """
 
-    def __init__(self, username, password, role):
+    def __init__(self, username="simon", password="simon", role="admin"):
         self.__username = username
         self.__password = password
         self.__role = role
@@ -36,7 +36,14 @@ class User:
         self.__users.append(dico)
         print(self.__users)
 
+    def get_perms(self, username):
+        pass
 
-# Form validation
-#def validate(form):
-#    return len(form) > 0
+    def send(self, username, password):
+        pass
+
+    def modify(self, password):
+        new_password = input("entrer votre nouveau mot de passe :" )
+        verify = input("entrer a nouva-eau votre mot de passe")
+        if new_password == verify:
+            User.send(self, User.username(), new_password)
