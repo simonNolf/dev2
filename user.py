@@ -12,11 +12,13 @@ class User:
     :type role : string
     """
 
-    def __init__(self, username="simon", password="simon", role="admin"):
+    def __init__(self, username="simon", password="simon", role="admin", secret_q, secret_a):
         self.__username = username
         self.__password = password
         self.__role = role
         self.__users = []
+        self.__secret_q = secret_q
+        self.secret_a = secret_a
 
     # faire les setter des differents arguments
     def username(self):
@@ -27,6 +29,13 @@ class User:
 
     def role(self):
         return self.__role
+    @property
+    def secret_q(self):
+        return self.__secret_q
+
+    @property
+    def secret_a(self):
+        return self.__secret_a
 
     def addusers(self):
         dico = {}
